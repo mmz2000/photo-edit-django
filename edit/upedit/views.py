@@ -29,6 +29,8 @@ def edit(request, key):
     else:
         context = {
             'pic_url':'media/%s' % im.name,
+            'rotate_url':'rt/',
+            'resize_url':'rs/',
         }
         return render(request, 'edit.html', context)
 
@@ -49,5 +51,7 @@ def rotatation(request, key):
         return render(request, 'cannotedit.html')
     else:
         im2edit = Image.open('media/%s' % im.name)
-        im2edit = im2edit.rotate()
-    return
+        im2edit = im2edit.rotate(
+            int(request.POST['deg'])).save('media/%s' % im.name)
+        redirect_path = '/up/edit/%s/' % key
+        return redirect(redirect_path)

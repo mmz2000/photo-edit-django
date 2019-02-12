@@ -7,10 +7,18 @@
 <body>
     <img src="../../../{{pic_url}}"><br>
     <button><a href='bl/'>bw</a></button>
-    <form action="/rt" method="post" enctype="multipart/form-data">
+    <form action="{{rotate_url}}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <input type="text" name="deg" id="deg">
         <input type="submit" value="rotate" name="submit">
+    </form>
+    <form action="{{resize_url}}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        x1:<input type="text" name="x1" id="x1">
+        y1:<input type="text" name="y1" id="y1">
+        x2:<input type="text" name="x2" id="x2">
+        y2:<input type="text" name="y2" id="y2">
+        <input type="submit" value="resize" name="submit">
     </form>
 </body>
 

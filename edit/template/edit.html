@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+<title></title>
+
+<body>
+    <img src="../../../{{pic_url}}"><br>
+    <button><a href='bl/'>bw</a></button>
+    <form action="/rt" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="text" name="deg" id="deg">
+        <input type="submit" value="rotate" name="submit">
+    </form>
+</body>
+
+</html>

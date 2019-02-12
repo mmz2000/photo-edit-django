@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body 
+{
+    margin:0;
+}
+.header
+{
+    padding: 0;
+}
+
+.header h1 
+{
+    color: #ffffff;
+    background-color: #7a1010;
+    font-size: 16pt;
+    text-align: center;
+    padding: 2px 0px;
+}
+
+.container
+{
+    max-width: 650px;
+    margin: auto;
+}
+
+.blank
+{
+    height: 80px;
+}
+
+.box
+{
+    box-shadow: 0px 2px 5px #aaaaaa;
+    border-radius: 5px;
+}
+
+.box .header h1
+{
+    border-radius: 5px 5px 0 0;
+    color: #ffffff;
+    background-color: #9f1010;
+    font-size: 23pt;
+    text-align: center;
+    padding: 1px 0px;
+}
+
+.box .main
+{
+    background: #e9e8e8;
+    border-radius: 0px 0px 5px 5px;
+    padding: 15px 10px;
+    margin-bottom: 35px;
+}
+
+.buttonarea 
+{
+    width: 100%;
+    margin: 20px auto;
+    display: inline-block;
+    margin-top: 25px;
+}
+.button 
+{
+    float: left;
+    background: #cf1010;
+    width: 40%;
+    margin: 0 5%;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 35px;
+}
+.button:hover
+{
+    background-color: #fff;
+    border-color: #cf1010;
+    box-shadow: 0 0 0 2px #cf1010;
+}
+.clickable
+{
+    display: block;
+    height: 80px;
+    line-height: 80px;
+}
+.button:hover a
+{
+    color: #cf1010;
+}
+.button a
+{
+    text-decoration: none;
+    color: #ffffff;
+}
+</style>
+</head>
+<title>Welcome!</title>
+<body style="background-color:#e9e8e8;">
+<div class="header">
+    <h1>Welcome to Photoland</h1>
+</div>
+<div class="container">
+    <div class="blank"></div>
+    <div class="box">
+        <div class="box header">
+            <h1>What do you want me to do?</h1>
+        </div>
+        <div class="box main">
+            <div class="buttonarea">
+                <div class="button" style="margin-left: 5%">
+                    <a href="up/">
+                        <span class="clickable">Upload new pic</span>
+                    </a>
+                </div>
+                <div class="button">
+                    <a href="">
+                        <span class="clickable">View shared pics</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

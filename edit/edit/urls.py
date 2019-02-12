@@ -18,9 +18,10 @@ from django.urls import path, include
 from . import views
 from django.conf.urls.static import static
 from django.conf import settings
-
+import upedit
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
     path('up/', include('upedit.urls')),
+    path('feed/', upedit.views.feed)
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

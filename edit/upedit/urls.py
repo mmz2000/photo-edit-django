@@ -9,4 +9,5 @@ urlpatterns = [
     path('edit/<int:key>/rt/', views.rotatation, name='rt'),
     path('edit/<int:key>/rs/', views.resizer, name='rs'),
     path('edit/<int:key>/cr/', views.croper, name='cr'),
+    path('edit/<int:key>/sh/', views.share, name='sh'),
 ]

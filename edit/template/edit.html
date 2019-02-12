@@ -12,6 +12,12 @@
         <input type="text" name="deg" id="deg">
         <input type="submit" value="rotate" name="submit">
     </form>
+    <form action="{{resize_url}}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        height:<input type="text" name="h_size" id="h_size">
+        width:<input type="text" name="w_size" id="w_size">        
+        <input type="submit" value="resize" name="submit">
+    </form>
     <form action="{{crop_url}}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         x1:<input type="text" name="x1" id="x1">

@@ -72,3 +72,17 @@ def croper (request, key):
         im2edit.save('media/%s' % im.name)
         redirect_path = '/up/edit/%s/' % key
         return redirect(redirect_path)
+
+
+def resizer (request,key):
+    im = pic.objects.get(pk=key)
+    if im.edited:
+        return render(request, 'cannotedit.html')
+    else:
+        im2edit = Image.open('media/%s' % im.name)
+        x = int(request.POST['w_size'])
+        y = int(request.POST['h_size'])
+        im2edit = im2edit.resize((x,y))
+        im2edit.save('media/%s' % im.name)
+        redirect_path = '/up/edit/%s/' % key
+        return redirect(redirect_path)

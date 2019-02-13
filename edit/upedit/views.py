@@ -92,6 +92,8 @@ def croper (request, key):
             return render(request, 'wronginput.html')
         if (x1>=x2)or(y1>=y2):
             return render(request, 'wronginput2.html')
+        if (x1 < 0) or (x2 < 0) or (y1 < 0) or (y2 < 0):
+            return render(request, 'wronginput3.html')
         im2edit = im2edit.crop((x1, y1, x2, y2))
         im2edit.save('media/%s' % im.name)
         redirect_path = '/up/edit/%s/' % key
